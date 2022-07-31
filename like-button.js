@@ -11,11 +11,15 @@ class LikeButton extends React.Component {
     if (this.state.liked) {
       return "You liked this.";
     }
+    // // pure JS
     return e(
       "button",
       { onClick: () => this.setState({ liked: true }) },
       "Like"
     );
+
+    // Same outcome, but using JSX instead (fails currently)
+    //return <button onClick={() => this.setState({ liked: true })}>Like</button>;
   }
 }
 
